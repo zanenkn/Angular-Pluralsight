@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
     <h1>
       {{pageTitle}}
     </h1>
-    ... Starter Files ...
+    <cats></cats>
     </div>
   `
 })

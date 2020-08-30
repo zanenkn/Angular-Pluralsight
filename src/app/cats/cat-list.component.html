@@ -1,6 +1,6 @@
 <div class='card'>
   <div class='card-header'>
-    Cat List
+    {{pageTitle}}
   </div>
   <div class='card-body'>
     <div class='row'>
@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class='table-responsive'>
-      <table class='table'>
+      <table class='table' *ngIf='cats && cats.length'>
         <thead>
           <tr>
             <th>
@@ -31,7 +31,14 @@
           </tr>
         </thead>
         <tbody>
-
+          <tr *ngFor='let cat of cats'>
+            <td></td>
+            <td>{{cat.catName}}</td>
+            <td>{{cat.catCode}}</td>
+            <td>{{cat.available}}</td>
+            <td>{{cat.price}}</td>
+            <td>{{cat.starRating}}</td>
+          </tr>
         </tbody>
       </table>
     </div>
