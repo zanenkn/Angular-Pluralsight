@@ -32,7 +32,13 @@
         </thead>
         <tbody>
           <tr *ngFor='let cat of cats'>
-            <td></td>
+            <td>
+              <img [src]='cat.imageUrl' 
+                  [title]='cat.catName'
+                  [style.width.px]='imageWidth'
+                  [style.margin.px]='imageMargin'
+              >
+            </td>
             <td>{{cat.catName}}</td>
             <td>{{cat.catCode}}</td>
             <td>{{cat.available}}</td>

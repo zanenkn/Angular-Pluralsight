@@ -7,6 +7,8 @@ import { Component } from '@angular/core'
 
 export class CatListComponent {
   pageTitle: string = 'Cat List'
+  imageWidth: number = 100
+  imageMargin: number= 2 
   cats: any[] = [
     {
       "catId": 1,
