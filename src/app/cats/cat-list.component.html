@@ -19,8 +19,8 @@
         <thead>
           <tr>
             <th>
-              <button class='btn btn-primary'>
-                Show Image
+              <button class='btn btn-primary' (click)='toggleImage()'>
+                {{showImage ? 'Hide' : 'Show'}} Image
               </button>
             </th>
             <th>Cat</th>
@@ -33,10 +33,11 @@
         <tbody>
           <tr *ngFor='let cat of cats'>
             <td>
-              <img [src]='cat.imageUrl' 
-                  [title]='cat.catName'
-                  [style.width.px]='imageWidth'
-                  [style.margin.px]='imageMargin'
+              <img *ngIf='showImage'
+                [src]='cat.imageUrl' 
+                [title]='cat.catName'
+                [style.width.px]='imageWidth'
+                [style.margin.px]='imageMargin'
               >
             </td>
             <td>{{cat.catName}}</td>

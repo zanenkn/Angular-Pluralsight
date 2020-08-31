@@ -9,6 +9,7 @@ export class CatListComponent {
   pageTitle: string = 'Cat List'
   imageWidth: number = 100
   imageMargin: number= 2 
+  showImage: boolean = false
   cats: any[] = [
     {
       "catId": 1,
@@ -31,4 +32,8 @@ export class CatListComponent {
       "imageUrl": "https://images.unsplash.com/photo-1579983604605-020b903a8dcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80"
     }
   ]
+
+  toggleImage(): void {
+    this.showImage = !this.showImage
+  }
 }
